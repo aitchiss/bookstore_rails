@@ -5,6 +5,7 @@ class CreateSales < ActiveRecord::Migration
       t.datetime :date
       t.references :author, index: true, foreign_key: true
       t.references :bookstore, index: true, foreign_key: true
+      t.references :book, index: true, foreign_key: true
 
 
       t.timestamps null: false

@@ -1,5 +1,7 @@
 Book.delete_all
 Author.delete_all
+Bookstore.delete_all
+Sale.delete_all
 
 a1 = Author.create({name: 'Dan Brown'})
 a2 = Author.create({name: 'Charles Dickens'})
@@ -15,5 +17,5 @@ b4 = Book.create({author: a3, title: 'The Casual Vacancy'})
 bs1 = Bookstore.create({name: 'Waterstones', location: 'Princes St'})
 bs2 = Bookstore.create({name: 'Blackwells', location: 'On the bridges'})
 
-Sale.create({ author: a1, bookstore: bs2, price: 10, date: '2017-05-09' })
-Sale.create({ author: a3, bookstore: bs1, price: 8, date: '2015-02-12' })
+Sale.create({ author: a1, bookstore: bs2, book: b1, price: 10, date: '2017-05-09' })
+Sale.create({ author: a3, bookstore: bs1, book: b4, price: 8, date: '2015-02-12' })

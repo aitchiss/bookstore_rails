@@ -40,11 +40,13 @@ ActiveRecord::Schema.define(version: 20170509103426) do
     t.datetime "date"
     t.integer  "author_id"
     t.integer  "bookstore_id"
+    t.integer  "book_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   add_index "sales", ["author_id"], name: "index_sales_on_author_id"
+  add_index "sales", ["book_id"], name: "index_sales_on_book_id"
   add_index "sales", ["bookstore_id"], name: "index_sales_on_bookstore_id"
 
 end

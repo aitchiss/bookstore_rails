@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  resources :authors do
+    resources :sales
+  end
+
+  resources :bookstores do
+    resources :authors
+  end
+
+  resources :sales do
+    resources :bookstores
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
